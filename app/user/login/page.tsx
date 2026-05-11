@@ -45,6 +45,7 @@ export default function Login() {
                               </label>
                               <input
                                     type="email"
+                                    required
                                     placeholder="Enter your email"
                                     onChange={(e) =>
                                           setForm({
@@ -64,6 +65,7 @@ export default function Login() {
                               <input
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Enter your password"
+                                    required
                                     onChange={(e) =>
                                           setForm({
                                                 ...form,

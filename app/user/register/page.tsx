@@ -59,6 +59,7 @@ export default function Register() {
                               <input
                                     type={showPassword ? "text" : "password"}
                                     placeholder="Enter your password"
+                                    required
                                     onChange={(e) =>
                                           setForm({
                                                 ...form,
@@ -72,6 +73,7 @@ export default function Register() {
                         <div className="flex items-center gap-2">
                               <input
                                     type="checkbox"
+                                    required
                                     onChange={(e) =>
                                           setShowPassword(e.target.checked)
                                     }
