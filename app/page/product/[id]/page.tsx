@@ -6,10 +6,12 @@ import Link from "next/link";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import { useAuth } from "@/app/context/auth";
 import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 export default function ProductDetail({ params }: any) {
       const [product, setProduct] = useState<any>(null);
-      const {addToCarts} =useAuth();
+      const { addToCarts, user } =useAuth();
       const { id }: any = use(params);
+      const router = useRouter();
       useEffect(() => {
             const getProduct = async () => {
                   const res = await fetch(
@@ -58,7 +60,13 @@ export default function ProductDetail({ params }: any) {
                               type="button" 
                               className="cursor-pointer active:bg-gray-400 duration-200 
                               w-50 mt-5 h-10 border-0 outline-0 rounded-lg bg-gray-500"
-                              onClick={()=>{addToCarts(product); toast.success('add cart success')}}
+                              onClick={()=>{
+                                    if (!user) {
+                                          return router.push('/user/login');
+                                    }
+                                    addToCarts(product); 
+                                    toast.success('add cart success')
+                              }}
                         >
                               Add Cart
                         </button>
