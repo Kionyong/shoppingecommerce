@@ -20,7 +20,7 @@ export default function Login() {
             const success = login(form);
 
             if (success) {
-                  router.push("/dashboard");
+                  router.push("/page/account");
             } else {
                   alert("Invalid email or password");
             }

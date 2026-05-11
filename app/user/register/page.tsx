@@ -18,7 +18,7 @@ export default function Register() {
             e.preventDefault();
 
             register(form);
-            router.push("/login");
+            router.push("/user/login");
       };
 
       return (
@@ -82,7 +82,6 @@ export default function Register() {
                               </p>
                         </div>
 
-                        {/* Button */}
                         <button
                               type="submit"
                               className="w-full bg-green-500 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-200"
@@ -90,7 +89,6 @@ export default function Register() {
                               Register
                         </button>
 
-                        {/* Footer */}
                   </form>
             </main>
       );

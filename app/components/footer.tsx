@@ -18,8 +18,8 @@ export default function Footer() {
                               <h3 className="font-semibold mb-3">Quick Links</h3>
                               <ul className="space-y-2 text-gray-400">
                                     <li><Link href="/">Home</Link></li>
-                                    <li><Link href="/about">About</Link></li>
-                                    <li><Link href="/cart">Cart</Link></li>
+                                    <li><Link href="/page/about">About</Link></li>
+                                    <li><Link href="/page/account">Account</Link></li>
                               </ul>
                         </div>
 
