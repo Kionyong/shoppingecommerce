@@ -41,6 +41,7 @@ export default function Register() {
                               <input
                                     type="email"
                                     placeholder="Enter your email"
+                                    required
                                     onChange={(e) =>
                                           setForm({
                                                 ...form,
